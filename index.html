@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firachine Iliane — Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav class="navbar-custom">
+  <span class="navbar-brand-text">IlianeFi</span>
+
+  <!-- Desktop links -->
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#qualities">Qualities</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <!-- <a href="./CV_Iliane_Firachine.pdf" download class="nav-cv">
+      <svg class="dl-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+      </svg>
+      Resume
+    </a> -->
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero"       onclick="closeMobile()">Home</a>
+    <a href="#qualities"  onclick="closeMobile()">Qualities</a>
+    <a href="#skills"     onclick="closeMobile()">Skills</a>
+    <a href="#projects"   onclick="closeMobile()">Projects</a>
+    <a href="#contact"    onclick="closeMobile()">Contact</a>
+    <a href="./CV_Iliane_Firachine.pdf" download onclick="closeMobile()" class="mobile-cv">
+      ↓ Download CV
+    </a>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section id="hero">
+  <div class="hero-bg-circle circle-1"></div>
+  <div class="hero-bg-circle circle-2"></div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <p class="hero-tag">Backend Dev</p>
+        <h1 class="hero-name">
+          <span class="line1">Firachine</span>
+          <span class="line2 glitch" data-text="Iliane">Iliane</span>
+        </h1>
+        <p class="hero-desc">3rd-year Software Engineering student&nbsp;@ EMSI — driven by backend systems, clean architecture &amp; solving hard problems through code.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-neon"><span>View Projects</span></a>
+          <a href="#contact" class="btn-ghost">Get in Touch</a>
+          <a href="./CV_Iliane_Firachine.pdf" download class="btn-cv">
+            <svg class="dl-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1 text-center">
+        <div class="hero-img-wrap">
+          <span class="hero-img-corner tl">// portrait.jpg</span>
+          <img src="./assets/iliane.jpeg" alt="Firachine Iliane"
+               onerror="this.src='https://placehold.co/400x480/0d0d22/00ffe5?text=Iliane&font=Space+Mono'">
+          <span class="hero-img-corner br">v2025.1.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ STATS ════ -->
+<section><div class="container">
+  <div class="stats-row">
+    <div class="row">
+      <div class="col-6 col-md-3 stat-item reveal" style="transition-delay:.1s">
+        <div class="stat-num" data-target="3" data-suffix="+">0</div>
+        <div class="stat-label">Years Learning</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item reveal" style="transition-delay:.2s">
+        <div class="stat-num" data-target="15" data-suffix="+">0</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item reveal" style="transition-delay:.3s">
+        <div class="stat-num" data-target="16" data-suffix="+">0</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item reveal" style="transition-delay:.4s">
+        <div class="stat-num" data-target="∞">∞</div>
+        <div class="stat-label">Curiosity</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div class="neon-line"></div>
+
+<!-- ════ QUALITIES ════ -->
+<section id="qualities"><div class="container">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">What I bring</p>
+    <h2 class="section-title">Core <span class="accent">Qualities</span></h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4 reveal reveal-delay-1">
+      <div class="quality-card">
+        <span class="quality-number">01</span>
+        <div class="quality-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 16 16">
+            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+          </svg>
+        </div>
+        <h3 class="quality-title">Time Management</h3>
+        <p class="quality-text">Organizing work efficiently, prioritizing tasks, and consistently hitting deadlines without sacrificing quality.</p>
+      </div>
+    </div>
+    <div class="col-md-4 reveal reveal-delay-2">
+      <div class="quality-card">
+        <span class="quality-number">02</span>
+        <div class="quality-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 16 16">
+            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+          </svg>
+        </div>
+        <h3 class="quality-title">Problem Solving</h3>
+        <p class="quality-text">Breaking down complex challenges into logical steps and building clean, effective solutions under pressure.</p>
+      </div>
+    </div>
+    <div class="col-md-4 reveal reveal-delay-3">
+      <div class="quality-card">
+        <span class="quality-number">03</span>
+        <div class="quality-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff" viewBox="0 0 16 16">
+            <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641z"/>
+          </svg>
+        </div>
+        <h3 class="quality-title">Creativity</h3>
+        <p class="quality-text">Generating fresh ideas and unexpected approaches — finding the elegant solution where others see only obstacles.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div class="neon-line"></div>
+
+<!-- ════ SKILLS ════ -->
+<section id="skills"><div class="container">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Tech arsenal</p>
+    <h2 class="section-title">My <span class="accent">Skills</span></h2>
+  </div>
+  <div class="skills-grid reveal" id="skillsGrid">
+
+    <div class="skill-cell">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 50 50"><path fill="#e44d26" d="M45.27 2.32A1.5 1.5 0 0 0 44.54 2H5.46C4.72 2 4.07 2.49 3.88 3.2L7.99 42.52c.15.58.61 1.02 1.2 1.12L24.72 47.96c.18.04.37.04.55 0l16.02-4.57c.6-.1 1.06-.54 1.21-1.12L45.53 3.09a1.5 1.5 0 0 0-.26-.77zM37.28 11.05l-.44 4.87H18.04l.45 5.09h18.36l-1.34 15.09-10.06 3.04-9.94-3.01-.54-6.13h4.87l.22 2.38 5.55 1.17 5.46-1.17.58-6.44H14.05L12.72 11.05h24.56z"/></svg>
+      <span class="skill-name">HTML 5</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.90"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 50 50"><path fill="#264de4" fill-rule="evenodd" d="M42 6L39 40l-14 4-14-4L8 6zM16.8 28l4 .001.098 2.498L25 31.9l4.1-1.4.3-4.5h-8.8l-.2-4h9.2l.3-4H16.1l-.3-4h18.3l-.5 8-.7 11.5L25 36.1l-7.9-2.6z"/></svg>
+      <span class="skill-name">CSS 3</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.85"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 50 50"><path fill="#f0db4f" d="M43.3 4H6.7A2.67 2.67 0 0 0 4 6.67v36.66A2.67 2.67 0 0 0 6.67 46h36.66A2.67 2.67 0 0 0 46 43.33V6.67A2.67 2.67 0 0 0 43.33 4zM27 36.18C27 40.18 24.66 42 21.23 42c-3.09 0-5.32-2.07-6.23-4l3.14-1.9c.61 1.07 1.53 1.9 2.86 1.9 1.27 0 2-.5 2-2.43V23H27zm8.68 5.82c-3.54 0-5.55-1.79-6.68-4l3-2c.82 1.34 1.71 2.61 3.59 2.61 1.58 0 2.41-.79 2.41-1.88 0-1.31-.86-1.77-2.6-2.53l-.95-.41c-2.75-1.17-4.58-2.64-4.58-5.75 0-2.86 2.18-5.04 5.59-5.04 2.43 0 4.17.84 5.43 3.05l-2.97 1.91c-.66-1.18-1.36-1.64-2.46-1.64-1.12 0-1.83.71-1.83 1.64 0 1.14.71 1.6 2.34 2.31l.95.41c3.25 1.39 5.07 2.81 5.07 6 0 3.43-2.7 5.32-6.33 5.32z"/></svg>
+      <span class="skill-name">JavaScript</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.90"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 50 50"><path fill="#7952b3" d="M7.85 11.7C7.77 9.26 9.63 7 12.14 7h25.73c2.51 0 4.37 2.26 4.28 4.7-.08 2.35.02 5.4.77 7.88.75 2.49 2.01 4.07 4.08 4.27v2.29c-2.07.2-3.33 1.78-4.08 4.27-.75 2.48-.85 5.53-.77 7.88.09 2.44-1.77 4.71-4.28 4.71H12.14c-2.51 0-4.37-2.26-4.29-4.71.08-2.35-.02-5.4-.77-7.88C6.34 27.92 5.07 26.35 3 26.15v-2.29c2.07-.2 3.33-1.78 4.08-4.27.75-2.48.85-5.53.77-7.88z"/><path fill="#fff" d="M27.79 24.45v-.03c1.91-.33 3.4-2.12 3.4-4.09 0-1.4-.54-2.58-1.55-3.42-1.01-.84-2.43-1.28-4.1-1.28h-7.67v18.73h7.71c2 0 3.67-.49 4.81-1.41 1.14-.93 1.75-2.28 1.75-3.9 0-2.45-1.74-4.3-4.35-4.6zm-3.59-.87h-3.28v-5.48h3.9c2.14 0 3.32.94 3.32 2.65 0 1.83-1.4 2.83-3.94 2.83zm-3.28 2.3h3.88c2.8 0 4.22 1.01 4.22 3.01 0 1.99-1.4 3.05-4.05 3.05h-4.05v-6.06z"/></svg>
+      <span class="skill-name">Bootstrap</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.80"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="44" alt="Python">
+      <span class="skill-name">Python</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.90"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="44" alt="Java">
+      <span class="skill-name">Java</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.80"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="44" alt="C++">
+      <span class="skill-name">C / C++</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>95%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.95"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="44" alt="Django" style="filter:invert(1) brightness(2)">
+      <span class="skill-name">Django</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.80"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="44" alt="PHP">
+      <span class="skill-name">PHP</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.85"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" width="44" alt="Symfony" style="filter:invert(1) brightness(2)">
+      <span class="skill-name">Symfony</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>95%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.95"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="44" alt="Node.js">
+      <span class="skill-name">NodeJs</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.85"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="44" alt="MySQL">
+      <span class="skill-name">MySQL</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.85"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="44" alt="PL/SQL">
+      <span class="skill-name">PL / SQL</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.90"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="44" alt="Linux">
+      <span class="skill-name">Linux</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.80"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="44" alt="GitHub" style="filter:invert(1) brightness(2)">
+      <span class="skill-name">GitHub</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.85"></div></div></div>
+    </div>
+
+    <div class="skill-cell">
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="44" alt="PostgreSQL">
+      <span class="skill-name">PostgreSQL</span>
+      <div class="skill-bar-wrap"><div class="skill-bar-label"><span>70%</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:.70"></div></div></div>
+    </div>
+
+  </div>
+</div></section>
+
+<div class="neon-line"></div>
+
+<!-- ════ PROJECTS ════ -->
+<section id="projects"><div class="container">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Selected work</p>
+    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+  </div>
+  <div class="row g-4">
+
+    <!-- MaBoutique -->
+    <div class="col-md-6 reveal reveal-delay-1">
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="./assets/MaboutiqueHome.png" alt="MaBoutique"
+               onerror="this.src='https://placehold.co/600x340/0d0d22/a259ff?text=MaBoutique&font=Space+Mono'">
+          <div class="project-overlay"></div>
+          <a href="#" target="_blank" class="project-link-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#060612" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+          </a>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Django Project · Freelance 2026</p>
+          <h3 class="project-title">MaBoutique</h3>
+          <p class="project-desc">E-commerce platform with product catalog, shopping cart, secure checkout, and an admin dashboard for inventory and order management. Multi-role auth, REST API &amp; clean MVC architecture.</p>
+          <div class="project-techs">
+            <span class="tech-badge">Python</span><span class="tech-badge">Django</span>
+            <span class="tech-badge">PostgreSQL</span><span class="tech-badge">Bootstrap 5</span>
+            <span class="tech-badge">API REST</span><span class="tech-badge">JS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HotelApp -->
+    <div class="col-md-6 reveal reveal-delay-2">
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="./assets/hotellApp.png" alt="HotelApp"
+               onerror="this.src='https://placehold.co/600x340/0d0d22/00ffe5?text=HotelApp&font=Space+Mono'">
+          <div class="project-overlay"></div>
+          <a href="https://github.com/ilianeFI/HotelApp" target="_blank" class="project-link-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#060612" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+          </a>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Symfony Project · EMSI 2025</p>
+          <h3 class="project-title">HotelApp</h3>
+          <p class="project-desc">Hotel reservation system with multicriteria search, conflict detection, role-based auth, and admin dashboard. Relational DB with rooms, clients, reservations &amp; tariff seasons.</p>
+          <div class="project-techs">
+            <span class="tech-badge">PHP</span><span class="tech-badge">Symfony</span>
+            <span class="tech-badge">MySQL</span><span class="tech-badge">Bootstrap 5</span>
+            <span class="tech-badge">Twig</span><span class="tech-badge">JS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dogs World -->
+    <div class="col-md-6 reveal reveal-delay-1">
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="./assets/DOGSPNG.jpg" alt="Dogs World"
+               onerror="this.src='https://placehold.co/600x340/0d0d22/00ffe5?text=Dogs+World&font=Space+Mono'">
+          <div class="project-overlay"></div>
+          <a href="https://ilianefi.github.io/Dogs/" target="_blank" class="project-link-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#060612" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+          </a>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Web Design</p>
+          <h3 class="project-title">Dogs World</h3>
+          <p class="project-desc">A responsive dog-themed website with interactive galleries, breed info, and a clean modern layout built from scratch.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span><span class="tech-badge">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MoveJOY -->
+    <div class="col-md-6 reveal reveal-delay-2">
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="./assets/MoveJOY.png" alt="MoveJOY"
+               onerror="this.src='https://placehold.co/600x340/0d0d22/a259ff?text=MoveJOY&font=Space+Mono'">
+          <div class="project-overlay"></div>
+          <a href="https://ilianefi.github.io/first-bootsrtap-project/" target="_blank" class="project-link-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#060612" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>
+          </a>
+        </div>
+        <div class="project-body">
+          <p class="project-tag">Bootstrap Project</p>
+          <h3 class="project-title">MoveJOY</h3>
+          <p class="project-desc">Fully-responsive web app showcasing Bootstrap 5 mastery — smooth interactions and polished UI components. My first Bootstrap project.</p>
+          <div class="project-techs">
+            <span class="tech-badge">Bootstrap 5</span><span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="more-projects reveal">// Visit <a href="https://github.com/ilianeFI" target="_blank">github.com/ilianeFI</a> for more projects</p>
+</div></section>
+
+<div class="neon-line" style="margin-top:5rem"></div>
+
+<!-- ════ CONTACT ════ -->
+<section id="contact"><div class="container">
+  <div class="contact-box reveal">
+    <p class="section-eyebrow" style="display:block">Let's build something</p>
+    <h2 class="contact-big-text">Got a project?<br><span class="glow">Let's talk.</span></h2>
+    <p class="contact-sub">Open to internships, freelance work &amp; interesting collaborations.</p>
+    <a href="mailto:ilianefirachine0@gmail.com" class="contact-email">ilianefirachine0@gmail.com</a>
+  </div>
+
+  <!-- CV DOWNLOAD CARD -->
+  <div class="cv-card reveal">
+    <div class="cv-card-left">
+      <div class="cv-icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="var(--neon)" viewBox="0 0 16 16">
+          <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1L14 5.5zM4.5 8a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="cv-card-title">CV — Firachine Iliane</div>
+        <div class="cv-card-sub">Étudiant ingénieur · Backend / Full Stack · EMSI Casablanca</div>
+      </div>
+    </div>
+    <a href="./CV_Iliane_Firachine.pdf" download="CV_Iliane_Firachine.pdf" class="btn-dl">
+      <svg class="dl-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+      </svg>
+      <span>Download Resume</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- ════ FOOTER ════ -->
+<footer><div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+  <span class="footer-copy">© 2026 IlianeFi — Casablanca, Maroc</span>
+  <div class="footer-socials">
+    <a href="https://github.com/ilianeFI" target="_blank" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+    </a>
+    <a href="https://x.com/iliane_fira" target="_blank" title="X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iliane-firachine-837a683b2/" target="_blank" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+    </a>
+    <!-- CV in footer too -->
+    <a href="./CV_Iliane_Firachine.pdf" download title="Download CV">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+    </a>
+  </div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    /* ── Stat counters ── */
+    const counters = document.querySelectorAll('.stat-num[data-target]');
+    const countObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el     = entry.target;
+    const target = el.dataset.target;
+    const suffix = el.dataset.suffix || '';
+
+    // skip infinity symbol
+    if (target === '∞') { el.textContent = '∞'; countObserver.unobserve(el); return; }
+
+    const end      = parseInt(target);
+    const duration = 1800;           // ms
+    const step     = 16;             // ~60fps
+    const increment = end / (duration / step);
+    let current = 0;
+
+    el.textContent = '0' + suffix;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= end) {
+        el.textContent = end + suffix;
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(current) + suffix;
+      }
+    }, step);
+
+    countObserver.unobserve(el);
+  });
+    }, { threshold: 0.6 });
+
+counters.forEach(el => countObserver.observe(el));
+
+  /* ── Cursor ── */
+  const cursor = document.getElementById('cursor');
+  const ring   = document.getElementById('cursorRing');
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx+'px'; cursor.style.top = my+'px';
+  });
+  (function loop(){
+    rx += (mx-rx)*.12; ry += (my-ry)*.12;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button,.quality-card,.skill-cell,.project-card,.cv-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(2.5)';
+      ring.style.transform   = 'translate(-50%,-50%) scale(1.5)';
+      ring.style.opacity = '.18';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+      ring.style.transform   = 'translate(-50%,-50%) scale(1)';
+      ring.style.opacity = '.5';
+    });
+  });
+
+  /* ── Scroll reveal ── */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  /* ── Skill bars ── */
+  const bo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+          setTimeout(() => {
+            const w = parseFloat(bar.style.getPropertyValue('--w')) || 1;
+            bar.style.transform = `scaleX(${w})`;
+          }, i * 100);
+        });
+      }
+    });
+  }, { threshold: .2 });
+  const grid = document.getElementById('skillsGrid');
+  if(grid) bo.observe(grid);
+
+  /* ── Typed hero desc ── */
+  const desc = document.querySelector('.hero-desc');
+  if(desc){
+    const txt = desc.textContent;
+    desc.textContent = '';
+    desc.classList.add('typed-text');
+    let i = 0;
+    const t = setInterval(() => {
+      if(i < txt.length){ desc.textContent += txt[i++]; }
+      else { clearInterval(t); desc.classList.remove('typed-text'); }
+    }, 16);
+  }
+  /* ── Mobile menu ── */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+// close if user clicks outside
+document.addEventListener('click', e => {
+  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+    closeMobile();
+  }
+});
+
+// close on scroll
+window.addEventListener('scroll', () => closeMobile(), { passive: true });
+</script>
+</body>
+</html>
